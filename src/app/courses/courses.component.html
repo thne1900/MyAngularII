@@ -1,11 +1,25 @@
 <h1>Webbutveckling - Ramschema</h1>
 
-<ul>
-    <li *ngFor="let course of courses">
-        {{course.code}}
-        {{course.coursename}}
-        {{course.progression}}
-        {{course.syllabus}}
+<label for="search">SÖK:</label>
+<br>
+<input type="text" id="search" placeholder="Sök kurskod eller kursnamn här..."
+[(ngModel)]="searchCourse" (ngModelChange)="filterText()">
 
-    </li>
-</ul>
+<table>
+    <thead>
+    <tr>
+        <th (click)="sortToggle('code')"><u>Kurskoder:</u></th>
+        <th (click)="sortToggle('coursename')"><u>Kursnamn:</u></th>
+        <th (click)="sortToggle('progression')"><u>Progression:</u></th>
+
+    </tr>
+    </thead>
+<tbody>
+    <tr *ngFor="let course of filteredCourses">
+        <td>{{course.code}}</td>
+        <td>{{course.coursename}}</td>
+        <td>{{course.progression}}</td>
+    </tr>
+</tbody>
+</table>
+

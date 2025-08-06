@@ -10,4 +10,10 @@ import { CoursesComponent } from './courses/courses.component';
 })
 export class AppComponent {
   title = 'MyAngularII';
+
+    //Variables in the footer.
+  course:string= "Programmering i TypeScript"
+  schoolProgram: string="Webbutvecklingsprogrammet";
+  schoolName: string= "thne1900";
+  year: number= 2025;
 }

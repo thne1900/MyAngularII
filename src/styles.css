@@ -1,9 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
 body {
     background-color: blanchedalmond;
     font-family: 'Courier New', Courier, monospace;
     max-width: 1512px;
     height:auto;
-    margin-right:auto;
-    margin-left:auto;
+    margin: 0 auto;
+    
+
 }
+

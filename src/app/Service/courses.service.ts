@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CourseInfo } from './courseInfo';
+import { CourseInfo } from '../Model/courseInfo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
 
-  url:string ="https://webbutveckling.miun.se/files/ramschema.json";
+  private url:string ="https://webbutveckling.miun.se/files/ramschema.json";
 
   constructor(private http: HttpClient) { }
 

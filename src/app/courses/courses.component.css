@@ -1,0 +1,64 @@
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+label {margin-left: 33%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#search {
+    margin-left: 33%;
+    width:30%;
+    padding:1%;
+    background-color: rgb(246, 249, 111);
+    color:black;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+}
+
+table { 
+    text-align: center;
+    background-color: rgb(243, 96, 43);
+    margin-left: auto;
+    margin-right: auto;
+    padding:4%;
+    margin-top: 4%;
+    border: 4px black solid;
+    margin-bottom: 4%;
+}
+
+td {
+    font-size: 1.1em;
+    padding:1%;
+    
+}
+
+th {
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+th:hover {
+    font-size: 1.45em;
+    color:white;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+
+@media (max-width:1024px) {
+ h1 {font-size: 2.3em;}
+ label {font-size: 1.2em;}
+
+}
+
+@media (max-width:600px){
+    h1 {font-size: 1.6em;}
+    label {font-size: 1em; margin-left: 25%;}
+    #search {width:50%; margin-left: 25%;}
+    table {padding:1%; margin-left: 2%; margin-right: 2%;}
+    th {font-size: 1.1em;}
+    th:hover {font-size: 1.15em;}
+    td{font-size: 0.8em;}
+}
+
