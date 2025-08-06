@@ -11,7 +11,14 @@
 - En orginallista på kurserna och en filtrerad lista gjorde jag för att det fungerade bättre när jag skulle göra filtreringen och därefter ville ångra inmatningen. Istället för att inte ha möjlighet att backa i sökfunktionen så gjordes det möjligt att på detta sätt få upp kurserna som matchade inmatningen.
 - Med ngOnInit inhämtas kursernas data när komponenten körs. 
 - Därefter har jag gjort funktioner för sortering och hur man kan växla och för filtrering när man skriver in i sökfältet.
-- 
+- Sidan har fått styling och gjorts responsiv. 
+- Orginal-faviconen byttes ut och jag lade in en egenskapad favicon för utformningens skull. 
 
 ### Källor:
-#### Skriven av : thne1900, VT 2025. 
+- (Föreläsning) Angular II- HttpClient och services. Mattias Dahlgren 2025-04-28. 
+- (Video) Angular- HttpClient , Mattias Dahlgren 2025-02-06.
+- (Internet) https://refine.dev/blog/typescript-keyof/#typescript-setup 2025-08-05.
+- (Internet) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/     Array/sort 2025-08-05.
+
+
+#### Skriven av: thne1900, VT 2025. 
