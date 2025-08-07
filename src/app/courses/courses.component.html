@@ -2,12 +2,14 @@
 
 <label for="search">SÖK:</label>
 <br>
+<!--Syncs functions in course.component.ts in the input fields.-->
 <input type="text" id="search" placeholder="Sök kurskod eller kursnamn här..."
 [(ngModel)]="searchCourse" (ngModelChange)="filterText()">
 
 <table>
     <thead>
     <tr>
+    <!--Click function on the headlines-->
         <th (click)="sortToggle('code')"><u>Kurskoder:</u></th>
         <th (click)="sortToggle('coursename')"><u>Kursnamn:</u></th>
         <th (click)="sortToggle('progression')"><u>Progression:</u></th>
@@ -15,10 +17,11 @@
     </tr>
     </thead>
 <tbody>
+    <!--The data from the course list that is displayed.-->
     <tr *ngFor="let course of filteredCourses">
-        <td>{{course.code}}</td>
-        <td>{{course.coursename}}</td>
-        <td>{{course.progression}}</td>
+        <td id="courseCode">{{course.code}}</td>
+        <td id="courseName">{{course.coursename}}</td>
+        <td id="progression">{{course.progression}}</td>
     </tr>
 </tbody>
 </table>

@@ -15,27 +15,27 @@ import { FormsModule } from '@angular/forms';
 
 export class CoursesComponent {
 
-  //Lista med alla kurser som ska visas utifrån ett interface. 
-  courses: CourseInfo[]=[]; //Originallista
-  filteredCourses: CourseInfo[]=[]; //Filtrerad lista
+  //List of all courses to be displayed from an interface. 
+  courses: CourseInfo[]=[]; //Original list.
+  filteredCourses: CourseInfo[]=[]; //Filtrered list.
 
-  //Variabler för sorteringen
-  searchCourse:string=""; //Texten som skrivs in för att kunna filtrera i kurslistan. 
-  sortBy: string="course"; // Kolumn som ska sorteras.
-  sortOrder:boolean=true; //Ordningen på sorteringen. 
+  //Sorting variables
+  searchCourse:string=""; //The text entered to filter the course list. 
+  sortBy: string="course"; //Column to sort.
+  sortOrder:boolean=true; //The order of the sorting.
 
   constructor(private coursesService: CoursesService) {}
 
-  //Inhämtar kurserna(datan) när komponenten körs. 
+  //Retrieves courses (the data) when the component runs.
   ngOnInit() {
     this.coursesService.getCourses().subscribe((data) => {
       this.courses=data;
       this.filterText();
       this.filteredCourses=this.courses.slice();
-  });
+    });
   }
 
-  //Funktion som sorterar listan på aktuellt fält med ordningsföljd. 
+  //Function that sorts the list by the current field in order.
     sortCourses(){
       this.filteredCourses.sort((a, b)=>{
         const valueA=a[this.sortBy as keyof CourseInfo].toLowerCase();
@@ -47,7 +47,7 @@ export class CoursesComponent {
       });
     }
 
-  //Funktion som sorterar listan utifrån vilken column som klickas på. 
+  //Function that sorts the list based on which column is clicked. 
   sortToggle(column:string) {
     if(this.sortBy===column){
       this.sortOrder=!this.sortOrder;
@@ -58,7 +58,7 @@ export class CoursesComponent {
     this.sortCourses();
     }
 
-  //Funktion som baserat på sökfrasen filtrerar kurslistan. 
+  //Function that filters the course list based on the search phrase.
   filterText() {
     const filterObj= this.searchCourse.toLowerCase();
 
@@ -67,7 +67,6 @@ export class CoursesComponent {
 );
 this.sortCourses();
     }
-
   }
 
 

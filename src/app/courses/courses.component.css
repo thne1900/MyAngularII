@@ -1,6 +1,8 @@
+/*Styles for the course component. */
 h1 {
     font-size: 2.5em;
     text-align: center;
+    text-shadow: 6px 6px 10px rgb(124, 119, 115);
 }
 
 label {margin-left: 33%;
@@ -27,12 +29,12 @@ table {
     margin-top: 4%;
     border: 4px black solid;
     margin-bottom: 4%;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.7);
 }
 
 td {
     font-size: 1.1em;
     padding:1%;
-    
 }
 
 th {
@@ -46,10 +48,24 @@ th:hover {
     text-shadow: 4px 4px 8px rgba(0,0,0,0.5);
 }
 
-@media (max-width:1024px) {
- h1 {font-size: 2.3em;}
- label {font-size: 1.2em;}
+#courseCode {
+    text-shadow: 1px 1px 3px rgb(237, 228, 228);
+}
 
+#courseName {
+    text-shadow: 4px 4px 8px rgb(91, 89, 89); 
+    font-size: 1.2em;
+}
+
+#progression {
+    text-shadow: 1px 1px 3px rgb(237, 228, 228);
+}
+
+
+/*Media rules for smaller screen devices.*/
+@media (max-width:1024px) {
+    h1 {font-size: 2.3em;}
+    label {font-size: 1.2em;}
 }
 
 @media (max-width:600px){
@@ -60,5 +76,6 @@ th:hover {
     th {font-size: 1.1em;}
     th:hover {font-size: 1.15em;}
     td{font-size: 0.8em;}
+    #courseName {font-size: 0.9em;}
 }
 

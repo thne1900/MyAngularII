@@ -6,6 +6,8 @@ import { CourseInfo } from '../Model/courseInfo';
 @Injectable({
   providedIn: 'root'
 })
+
+//Retrieves url with data along with interface.
 export class CoursesService {
 
   private url:string ="https://webbutveckling.miun.se/files/ramschema.json";

@@ -2,8 +2,9 @@
 <router-outlet />
 <app-courses></app-courses>
 
+<!--Element in the footer with databinding-->
 <footer>
-   <p><strong>KURS:</strong> {{ course }} - Moment 4</p>
-   <p><i>{{ schoolProgram }}, VT  {{ year }}</i></p>
-   <p>© {{ schoolName }}</p>
+   <p><strong>KURS:</strong> {{ currentCourse }} - Moment 4</p>
+   <p><i>{{ schoolProg }}, VT  {{ schoolYear }}</i></p>
+   <p>© {{ schoolId }}</p>
 </footer>
